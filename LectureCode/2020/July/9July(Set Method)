@@ -1,0 +1,271 @@
+akshu@MSI:~$ python3
+Python 3.6.9 (default, Apr 18 2020, 01:56:04) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> domainName={'Facebook','Google','Biencaps','Apple'}
+>>> domainName
+{'Apple', 'Biencaps', 'Google', 'Facebook'}
+>>> domainName.add('Amazon')
+>>> domainName
+{'Apple', 'Google', 'Facebook', 'Amazon', 'Biencaps'}
+>>> domainName.add('Amazon')
+>>> domainName
+{'Apple', 'Google', 'Facebook', 'Amazon', 'Biencaps'}
+>>> domainName.add('Amazon','SpaceX')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add() takes exactly one argument (2 given)
+>>> domainName.add(('Amazon','SpaceX'))
+>>> domainName
+{'Apple', 'Google', 'Facebook', ('Amazon', 'SpaceX'), 'Amazon', 'Biencaps'}
+>>> domainName.add({'Amazon','SpaceX'})
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'set'
+>>> domainName.add(['Amazon','SpaceX'])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+>>> domainName={'Facebook','Google','Biencaps','Apple'}
+>>> domainName.update('Amazon','SpaceX')
+>>> domainName
+{'A', 'S', 'Apple', 'Google', 'X', 'Facebook', 'm', 'n', 'c', 'a', 'o', 'e', 'p', 'z', 'Biencaps'}
+>>> domainName={'Facebook','Google','Biencaps','Apple'}
+>>> domainName.update(('Amazon','SpaceX'))
+>>> domainName
+{'Apple', 'Google', 'SpaceX', 'Facebook', 'Amazon', 'Biencaps'}
+>>> domainName={'Facebook','Google','Biencaps','Apple'}
+>>> domainName.update({'Amazon','SpaceX'})
+>>> domainName
+{'Apple', 'Google', 'SpaceX', 'Facebook', 'Biencaps', 'Amazon'}
+>>> domainName={'Facebook','Google','Biencaps','Apple'}
+>>> domainName.update(['Amazon','SpaceX'])
+>>> domainName
+{'Apple', 'Google', 'SpaceX', 'Facebook', 'Amazon', 'Biencaps'}
+>>> domainName={'Facebook','Google','Biencaps','Apple'}
+>>> domainName.update(['Amazon','SpaceX'],('Microsoft','VMware'),{'Twitter','Instagram'})
+>>> domainName
+{'Apple', 'Google', 'SpaceX', 'Facebook', 'VMware', 'Amazon', 'Instagram', 'Twitter', 'Biencaps', 'Microsoft'}
+>>> playStore={'PubG','Fifa','TempleRun','LudoKing','SubwaySurf','ClashOfClans'}
+>>> playStore
+{'TempleRun', 'ClashOfClans', 'LudoKing', 'SubwaySurf', 'PubG', 'Fifa'}
+>>> playStore.remove('TempleRun')
+>>> playStore
+{'ClashOfClans', 'LudoKing', 'SubwaySurf', 'PubG', 'Fifa'}
+>>> playStore.remove('PokemonGo')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'PokemonGo'
+>>> playStore={'PubG','Fifa','TempleRun','LudoKing','SubwaySurf','ClashOfClans'}
+>>> playStore.remove(('TempleRun'))
+>>> playStore
+{'ClashOfClans', 'LudoKing', 'SubwaySurf', 'PubG', 'Fifa'}
+>>> playStore={'PubG','Fifa','TempleRun','LudoKing','SubwaySurf','ClashOfClans'}
+>>> playStore.remove(('TempleRun','PubG'))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: ('TempleRun', 'PubG')
+>>> playStore.remove(('PubG'))
+>>> playStore
+{'TempleRun', 'ClashOfClans', 'LudoKing', 'SubwaySurf', 'Fifa'}
+>>> playStore={'PubG','Fifa','TempleRun','LudoKing','SubwaySurf','ClashOfClans'}
+>>> playStore.remove(['PubG'])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+>>> playStore={'PubG','Fifa','TempleRun','LudoKing',('SubwaySurf','ClashOfClans')}
+>>> playStore
+{'TempleRun', ('SubwaySurf', 'ClashOfClans'), 'LudoKing', 'PubG', 'Fifa'}
+>>> playStore.remove(('SubwaySurf','ClashOfClans'))
+>>> playStore
+{'TempleRun', 'LudoKing', 'PubG', 'Fifa'}
+>>> playStore={'PubG','Fifa','TempleRun','LudoKing',('SubwaySurf','ClashOfClans')}
+>>> playStore
+{'TempleRun', ('SubwaySurf', 'ClashOfClans'), 'LudoKing', 'PubG', 'Fifa'}
+>>> playStore={'PubG','Fifa','TempleRun','LudoKing','SubwaySurf','ClashOfClans'}
+>>> playStore
+{'TempleRun', 'ClashOfClans', 'LudoKing', 'SubwaySurf', 'PubG', 'Fifa'}
+>>> playStore.discard('LudoKing')
+>>> playStore
+{'TempleRun', 'ClashOfClans', 'SubwaySurf', 'PubG', 'Fifa'}
+>>> playStore={'PubG','Fifa','TempleRun','LudoKing','SubwaySurf','ClashOfClans'}
+>>> playStore.discard(('LudoKing'))
+>>> playStore
+{'TempleRun', 'ClashOfClans', 'SubwaySurf', 'PubG', 'Fifa'}
+>>> playStore.discard(('LudoKing','PubG'))
+>>> playStore
+{'TempleRun', 'ClashOfClans', 'SubwaySurf', 'PubG', 'Fifa'}
+>>> playStore={'PubG','Fifa','TempleRun','LudoKing','SubwaySurf','ClashOfClans'}
+>>> playStore.discard(('LudoKing','PubG'))
+>>> playStore
+{'TempleRun', 'ClashOfClans', 'LudoKing', 'SubwaySurf', 'PubG', 'Fifa'}
+>>> playStore={'PubG','Fifa',('TempleRun','LudoKing'),'SubwaySurf','ClashOfClans'}
+>>> playStore.discard(('LudoKing','TempleRun'))
+>>> playStore
+{'ClashOfClans', ('TempleRun', 'LudoKing'), 'SubwaySurf', 'PubG', 'Fifa'}
+>>> playStore.discard(('TempleRun','LudoKing'))
+>>> playStore
+{'ClashOfClans', 'SubwaySurf', 'PubG', 'Fifa'}
+>>> playStore
+{'ClashOfClans', 'SubwaySurf', 'PubG', 'Fifa'}
+>>> playStore.discard('ShareIt')
+>>> playStore
+{'ClashOfClans', 'SubwaySurf', 'PubG', 'Fifa'}
+>>> playStore={'Fifa','PubG','LudoKing'}
+>>> playStore
+{'PubG', 'Fifa', 'LudoKing'}
+>>> playStore.pop()
+'PubG'
+>>> playStore.pop()
+'Fifa'
+>>> playStore={'Fifa','PubG','LudoKing'}
+>>> playStore.pop('Fifa')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: pop() takes no arguments (1 given)
+>>> playStore={'Fifa','PubG','LudoKing'}
+>>> playStore
+{'PubG', 'Fifa', 'LudoKing'}
+>>> playStore.clear()
+>>> playStore
+set()
+>>> AppStore={'HomeCourt','Things3','Tweetbot','GooglePay','WhatsApp'}
+>>> PlayStore={'Core2Web','CorpTalks','WhatsApp','GooglePay','Airdroid'}
+>>> AppStore
+{'Things3', 'HomeCourt', 'GooglePay', 'WhatsApp', 'Tweetbot'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> AppStore | PlayStore
+{'Things3', 'HomeCourt', 'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid', 'Tweetbot'}
+>>> AppStore={'HomeCourt','Things3','Tweetbot','GooglePay','WhatsApp'}
+>>> PlayStore={'Core2Web','CorpTalks','WhatsApp','GooglePay','Airdroid'}
+>>> AppStore
+{'Things3', 'HomeCourt', 'GooglePay', 'WhatsApp', 'Tweetbot'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> AppStore.union(PlayStore)
+{'Things3', 'HomeCourt', 'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid', 'Tweetbot'}
+>>> AppStore={'HomeCourt','Things3','Tweetbot','GooglePay','WhatsApp'}
+>>> PlayStore={'Core2Web','CorpTalks','WhatsApp','GooglePay','Airdroid'}
+>>> AppStore
+{'Things3', 'HomeCourt', 'GooglePay', 'WhatsApp', 'Tweetbot'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> AppStore & PlayStore
+{'GooglePay', 'WhatsApp'}
+>>> AppStore.intersection(PlayStore)
+{'GooglePay', 'WhatsApp'}
+>>> AppStore={'HomeCourt','Things3','Tweetbot','GooglePay','WhatsApp'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> PlayStore={'Core2Web','CorpTalks','WhatsApp','GooglePay','Airdroid'}
+>>> AppStore - PlayStore
+{'Things3', 'HomeCourt', 'Tweetbot'}
+>>> AppStore.diifference(PlayStore)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'set' object has no attribute 'diifference'
+>>> AppStore.difference(PlayStore)
+{'Things3', 'HomeCourt', 'Tweetbot'}
+>>> PlayStore - AppStore
+{'Core2Web', 'Airdroid', 'CorpTalks'}
+>>> PlayStore.difference(AppStore)
+{'Core2Web', 'Airdroid', 'CorpTalks'}
+>>> AppStore={'HomeCourt','Things3','Tweetbot','GooglePay','WhatsApp'}
+>>> PlayStore={'Core2Web','CorpTalks','WhatsApp','GooglePay','Airdroid'}
+>>> AppStore 
+{'Things3', 'HomeCourt', 'GooglePay', 'WhatsApp', 'Tweetbot'}
+>>> PlayStore 
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> AppStore.difference_update(PlayStore)
+>>> AppStore 
+{'Things3', 'HomeCourt', 'Tweetbot'}
+>>> AppStore={'HomeCourt','Things3','Tweetbot','GooglePay','WhatsApp'}
+>>> PlayStore={'Core2Web','CorpTalks','WhatsApp','GooglePay','Airdroid'}
+>>> AppStore
+{'Things3', 'HomeCourt', 'GooglePay', 'WhatsApp', 'Tweetbot'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> AppStore ^ PlayStore
+{'Core2Web', 'Things3', 'HomeCourt', 'Tweetbot', 'Airdroid', 'CorpTalks'}
+>>> AppStore.symmetric_difference(PlayStore)
+{'Core2Web', 'Things3', 'HomeCourt', 'Tweetbot', 'Airdroid', 'CorpTalks'}
+>>> AppStore={'HomeCourt','Things3','Tweetbot','GooglePay','WhatsApp'}
+>>> PlayStore={'Core2Web','CorpTalks','WhatsApp','GooglePay','Airdroid'}
+>>> AppStore
+{'Things3', 'HomeCourt', 'GooglePay', 'WhatsApp', 'Tweetbot'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> AppStore.symmetric_difference_update(PlayStore)
+>>> AppStore
+{'Things3', 'HomeCourt', 'CorpTalks', 'Core2Web', 'Airdroid', 'Tweetbot'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> AppStore={'HomeCourt','Things3','Tweetbot','GooglePay','WhatsApp'}
+>>> PlayStore={'Core2Web','CorpTalks','WhatsApp','GooglePay','Airdroid'}
+>>> AppStore
+{'Things3', 'HomeCourt', 'GooglePay', 'WhatsApp', 'Tweetbot'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> AppStore.isdisjoint(PlayStore)
+False
+>>> AppStore={'HomeCourt','Things3','Tweetbot'}
+>>> PlayStore={'Core2Web','CorpTalks','Airdroid'}
+>>> AppStore.isdisjoint(PlayStore)
+True
+>>> AppStore={'HomeCourt','Things3','Tweetbot','GooglePay','WhatsApp'}
+>>> AppStore
+{'Things3', 'HomeCourt', 'GooglePay', 'WhatsApp', 'Tweetbot'}
+>>> PlayStore={'WhatsApp','GooglePay'}
+>>> AppStore.isdisjoint(PlayStore)
+False
+>>> PlayStore.isdisjoint(AppStore)
+False
+>>> PlayStore.issubset(AppStore)
+True
+>>> AppStore={'HomeCourt','Things3','Tweetbot','GooglePay','WhatsApp'}
+>>> AppStore
+{'Things3', 'HomeCourt', 'GooglePay', 'WhatsApp', 'Tweetbot'}
+>>> PlayStore={'WhatsApp','GooglePay'}
+>>> PlayStore
+{'GooglePay', 'WhatsApp'}
+>>> AppStore.issuperset(PlayStore)
+True
+>>> PlayStore.issuperset(AppStore)
+False
+>>> AppStore={'HomeCourt','Things3','Tweetbot','GooglePay','WhatsApp'}
+>>> PlayStore={'Core2Web','CorpTalks','WhatsApp','GooglePay','Airdroid'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> myStore = PlayStore
+>>> myStore 
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> myStore.add('Instagram') 
+>>> myStore 
+{'GooglePay', 'CorpTalks', 'Core2Web', 'Instagram', 'WhatsApp', 'Airdroid'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', 'Instagram', 'WhatsApp', 'Airdroid'}
+>>> PlayStore={'Core2Web','CorpTalks','WhatsApp','GooglePay','Airdroid'}
+>>> myStore=PlayStore.copy()
+>>> myStore 
+{'Core2Web', 'GooglePay', 'WhatsApp', 'Airdroid', 'CorpTalks'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> myStore.add('Snapchat') 
+>>> myStore 
+{'Core2Web', 'Snapchat', 'GooglePay', 'WhatsApp', 'Airdroid', 'CorpTalks'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', 'WhatsApp', 'Airdroid'}
+>>> PlayStore={'Core2Web','CorpTalks','WhatsApp','GooglePay','Airdroid',('Tinder','Linkedin')}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', ('Tinder', 'Linkedin'), 'WhatsApp', 'Airdroid'}
+>>> myStore=PlayStore.copy()
+>>> myStore 
+{'Core2Web', ('Tinder', 'Linkedin'), 'GooglePay', 'WhatsApp', 'Airdroid', 'CorpTalks'}
+>>> myStore.add(('Hike')) 
+>>> myStore 
+{'Core2Web', ('Tinder', 'Linkedin'), 'Hike', 'GooglePay', 'WhatsApp', 'Airdroid', 'CorpTalks'}
+>>> PlayStore
+{'GooglePay', 'CorpTalks', 'Core2Web', ('Tinder', 'Linkedin'), 'WhatsApp', 'Airdroid'}
+>>> 
+

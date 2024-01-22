@@ -1,0 +1,190 @@
+akshu@MSI:~$ python3
+Python 3.6.9 (default, Apr 18 2020, 01:56:04) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> table = [2,4,6,8,10]
+>>> table
+[2, 4, 6, 8, 10]
+>>> import array as arr
+>>> marks = arr.array('i',[45,98,65,70])
+>>> marks
+array('i', [45, 98, 65, 70])
+>>> type(marks)
+<class 'array.array'>
+>>> id(marks)
+139902849738544
+>>> marks = arr.array('i',(45,98,65,70))
+>>> marks
+array('i', [45, 98, 65, 70])
+>>> marks = arr.array('i',{45,98,65,70})
+>>> marks
+array('i', [65, 98, 45, 70])
+>>> marks = arr.array('i',{45:'A',98:'B',65:'C',70:'D'})
+>>> marks
+array('i', [45, 98, 65, 70])
+>>> list1 = [2.5,6.5,7.5,8.0]
+>>> my_arr = arr.array('i',list1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: integer argument expected, got float
+>>> my_arr = arr.array('f',list1)
+>>> my_arr 
+array('f', [2.5, 6.5, 7.5, 8.0])
+>>> int_list = [1,2,3,4,5]
+>>> my_array = arr.array('f',int_list)
+>>> my_array 
+array('f', [1.0, 2.0, 3.0, 4.0, 5.0])
+>>> my_array = arr.array('d',int_list)
+>>> my_array 
+array('d', [1.0, 2.0, 3.0, 4.0, 5.0])
+>>> name = "Core2Web"
+>>> strArray = arr.array('c',name)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot use a str to initialize an array with typecode 'c'
+>>> strArray = arr.array('u',name)
+>>> strArray
+array('u', 'Core2Web')
+>>> strArray = arr.array('u',['A','K','S','H','A','Y'])
+>>> strArray
+array('u', 'AKSHAY')
+>>> emp = ['Rahul',9.8,524]
+>>> empArray = arr.array('i',emp)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: an integer is required (got type str)
+>>> emp = [11,9.8,524]
+>>> empArray = arr.array('i',emp)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: integer argument expected, got float
+>>> companyArr = arr.array('i',[5,4,1,1,2,3])
+>>> companArr
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'companArr' is not defined
+>>> companyArr
+array('i', [5, 4, 1, 1, 2, 3])
+>>> arr2 = companyArr
+>>> arr2 
+array('i', [5, 4, 1, 1, 2, 3])
+>>> id(arr2)
+139902782899888
+>>> id(companyArr)
+139902782899888
+>>> arr2.append(7) 
+>>> arr2 
+array('i', [5, 4, 1, 1, 2, 3, 7])
+>>> companyArr
+array('i', [5, 4, 1, 1, 2, 3, 7])
+>>> arr2 = []
+>>> arr2
+[]
+>>> companyArr
+array('i', [5, 4, 1, 1, 2, 3, 7])
+>>> arr2 = arr.array('i',companyArr.)
+companyArr.append(       companyArr.count(        companyArr.fromfile(     companyArr.fromunicode(  companyArr.itemsize      companyArr.reverse(      companyArr.tolist(       companyArr.typecode
+companyArr.buffer_info(  companyArr.extend(       companyArr.fromlist(     companyArr.index(        companyArr.pop(          companyArr.tobytes(      companyArr.tostring(     
+companyArr.byteswap(     companyArr.frombytes(    companyArr.fromstring(   companyArr.insert(       companyArr.remove(       companyArr.tofile(       companyArr.tounicode(    
+>>> arr2 = arr.array('i',companyArr.typecode,(var for var in companyArr))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: array() takes at most 2 arguments (3 given)
+>>> arr2 = arr.array(companyArr.typecode,(var for var in companyArr))
+>>> arr2
+array('i', [5, 4, 1, 1, 2, 3, 7])
+>>> arr2.append(9) 
+>>> arr2
+array('i', [5, 4, 1, 1, 2, 3, 7, 9])
+>>> companyArr
+array('i', [5, 4, 1, 1, 2, 3, 7])
+>>> id(arr2)
+139902782899568
+>>> id(companyArr)
+139902782899888
+>>> companyArr[:]
+array('i', [5, 4, 1, 1, 2, 3, 7])
+>>> companyArr[2:]
+array('i', [1, 1, 2, 3, 7])
+>>> companyArr[2:3]
+array('i', [1])
+>>> companyArr[:-3]
+array('i', [5, 4, 1, 1])
+>>> companyArr[-5:]
+array('i', [1, 1, 2, 3, 7])
+>>> companyArr[-5:-3]
+array('i', [1, 1])
+>>> companyArr[-3:-5]
+array('i')
+>>> jerNo = arr.array('i':{18:'kohli',7:'Dhoni',45:'Rohit',41:'Shreyas',33:'Hardik'})
+  File "<stdin>", line 1
+    jerNo = arr.array('i':{18:'kohli',7:'Dhoni',45:'Rohit',41:'Shreyas',33:'Hardik'})
+                         ^
+SyntaxError: invalid syntax
+>>> jerNo = arr.array('i',{18:'kohli',7:'Dhoni',45:'Rohit',41:'Shreyas',33:'Hardik'})
+>>> jerNo
+array('i', [18, 7, 45, 41, 33])
+>>> jerNo.append(10)
+>>> jerNo
+array('i', [18, 7, 45, 41, 33, 10])
+>>> jerNo.insert(3,10)
+>>> jerNo
+array('i', [18, 7, 45, 10, 41, 33, 10])
+>>> jerNo.extend(99)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+>>> jerNo.extend([186,200,183,91,147])
+>>> jerNo
+array('i', [18, 7, 45, 10, 41, 33, 10, 186, 200, 183, 91, 147])
+>>> wickets = [700,500,400,300,200]
+>>> jerNo.fromlist(wickets)
+>>> jerNo
+array('i', [18, 7, 45, 10, 41, 33, 10, 186, 200, 183, 91, 147, 700, 500, 400, 300, 200])
+>>> jerNo.remove(700)
+>>> jerNo.remove(147)
+>>> jerNo.remove(500)
+>>> jerNo
+array('i', [18, 7, 45, 10, 41, 33, 10, 186, 200, 183, 91, 400, 300, 200])
+>>> jerNo.pop()
+200
+>>> jerNo.pop()
+300
+>>> jerNo.pop()
+400
+>>> jerNo
+array('i', [18, 7, 45, 10, 41, 33, 10, 186, 200, 183, 91])
+>>> jerNo.reverse()
+>>> jerNo
+array('i', [91, 183, 200, 186, 10, 33, 41, 10, 45, 7, 18])
+>>> jerNo.index(186)
+3
+>>> jerNo.index(10)
+4
+>>> jerNo.extend([200,200,200])
+>>> jerNo
+array('i', [91, 183, 200, 186, 10, 33, 41, 10, 45, 7, 18, 200, 200, 200])
+>>> jerNo.count(200)
+4
+>>> type(jerNo)
+<class 'array.array'>
+>>> id(jerNo)
+139902782900208
+>>> xyz = jerNo.tolist()
+>>> xyz
+[91, 183, 200, 186, 10, 33, 41, 10, 45, 7, 18, 200, 200, 200]
+>>> id(xy)\z
+  File "<stdin>", line 1
+    id(xy)\z
+           ^
+SyntaxError: unexpected character after line continuation character
+>>> id(xyz)
+139902782794440
+>>> id(jerNo)
+139902782900208
+>>> type(xyz)
+<class 'list'>
+>>> jerNo.buffer_info()
+(139902782825224, 14)
+>>> 
+

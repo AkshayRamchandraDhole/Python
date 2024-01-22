@@ -1,0 +1,280 @@
+akshu@MSI:~$ python3
+Python 3.6.9 (default, Apr 18 2020, 01:56:04) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> chineseProduct=['UCBrowser','Tiktok','ShareIt']
+>>> chineseProduct
+['UCBrowser', 'Tiktok', 'ShareIt']
+>>> chineseProduct[:]
+['UCBrowser', 'Tiktok', 'ShareIt']
+>>> chineseProduct[:-1]
+['UCBrowser', 'Tiktok']
+>>> chineseProduct[::-1]
+['ShareIt', 'Tiktok', 'UCBrowser']
+>>> chineseProduct[-1::]
+['ShareIt']
+>>> chineseProduct[-3::]
+['UCBrowser', 'Tiktok', 'ShareIt']
+>>> chineseProduct[::-3]
+['ShareIt']
+>>> chineseProduct[::-1]
+['ShareIt', 'Tiktok', 'UCBrowser']
+>>> chineseProduct.append('PUBG')
+>>> chineseProduct
+['UCBrowser', 'Tiktok', 'ShareIt', 'PUBG']
+>>> batsman=['Virat','Rohit','Dhoni']
+>>> bowler=['Bhuvi','Bumrah','Chahal']
+>>> TeamIndia
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'TeamIndia' is not defined
+>>> TeamIndia=[]
+>>> TeamIndia
+[]
+>>> TeamIndia.append(batsman)
+>>> TeamIndia
+[['Virat', 'Rohit', 'Dhoni']]
+>>> TeamIndia.append(bowler)
+>>> TeamIndia
+[['Virat', 'Rohit', 'Dhoni'], ['Bhuvi', 'Bumrah', 'Chahal']]
+>>> batsman=('Virat','Rohit','Dhoni')
+>>> bowler={'Bhuvi','Bumrah','Chahal'}
+>>> TeamIndia=[]
+>>> TeamIndia
+[]
+>>> TeamIndia.append(batsman)
+>>> TeamIndia
+[('Virat', 'Rohit', 'Dhoni')]
+>>> TeamIndia.append(bowler)
+>>> TeamIndia
+[('Virat', 'Rohit', 'Dhoni'), {'Chahal', 'Bumrah', 'Bhuvi'}]
+>>> allrounder={38:"Hardik",9:"Jadeja"}
+>>> TeamIndia.append(allrounder)
+>>> TeamIndia
+[('Virat', 'Rohit', 'Dhoni'), {'Chahal', 'Bumrah', 'Bhuvi'}, {38: 'Hardik', 9: 'Jadeja'}]
+>>> batsman=('Virat','Rohit','Dhoni')
+>>> batsman
+('Virat', 'Rohit', 'Dhoni')
+>>> bowler={'Bhuvi','Bumrah','Chahal'}
+>>> bowler
+{'Chahal', 'Bumrah', 'Bhuvi'}
+>>> TeamIndia=[]
+>>> TeamIndia
+[]
+>>> TeamIndia.append(batsman)
+>>> TeamIndia
+[('Virat', 'Rohit', 'Dhoni')]
+>>> TeamIndia.append(bowler)
+>>> TeamIndia
+[('Virat', 'Rohit', 'Dhoni'), {'Chahal', 'Bumrah', 'Bhuvi'}]
+>>> allrounder={38:"Hardik",9:"Jadeja"}
+>>> allrounder
+{38: 'Hardik', 9: 'Jadeja'}
+>>> TeamIndia.append(allrounder)
+>>> TeamIndia
+[('Virat', 'Rohit', 'Dhoni'), {'Chahal', 'Bumrah', 'Bhuvi'}, {38: 'Hardik', 9: 'Jadeja'}]
+>>> batsman=['Virat','Rohit','Dhoni']
+>>> bowler=['Bhuvi','Bumrah','Chahal']
+>>> batsman
+['Virat', 'Rohit', 'Dhoni']
+>>> bowle
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'bowle' is not defined
+>>> bowler
+['Bhuvi', 'Bumrah', 'Chahal']
+>>> batsman
+['Virat', 'Rohit', 'Dhoni']
+>>> TeamIndia=[]
+>>> TeamIndia.extend(batsman)
+>>> TeamIndia
+['Virat', 'Rohit', 'Dhoni']
+>>> TeamIndia.extend(bowler)
+>>> TeamIndia
+['Virat', 'Rohit', 'Dhoni', 'Bhuvi', 'Bumrah', 'Chahal']
+>>> TeamIndia.extend(allrounder)
+>>> TeamIndia
+['Virat', 'Rohit', 'Dhoni', 'Bhuvi', 'Bumrah', 'Chahal', 38, 9]
+>>> BasicProg=('c'.'c++','Java','Python')
+  File "<stdin>", line 1
+    BasicProg=('c'.'c++','Java','Python')
+                       ^
+SyntaxError: invalid syntax
+>>> BasicProg=('c','c++','Java','Python')
+>>> AdvProg={'Flutter','Android'}
+>>> BasicProg
+('c', 'c++', 'Java', 'Python')
+>>> AdvProg
+{'Android', 'Flutter'}
+>>> Lang=[]
+>>> Lang.extend(BasicProg)
+>>> Lang
+['c', 'c++', 'Java', 'Python']
+>>> Lang.extend(AdvProg)
+>>> Lang
+['c', 'c++', 'Java', 'Python', 'Android', 'Flutter']
+>>> Final2011=['Sachin','Sehwagh','Gambhir','Kohli','Yuvi']
+>>> Final2011.insert(4,'Dhoni')
+>>> Final2011
+['Sachin', 'Sehwagh', 'Gambhir', 'Kohli', 'Dhoni', 'Yuvi']
+>>> Final2011.insert(7,'Chawla')
+>>> Final2011
+['Sachin', 'Sehwagh', 'Gambhir', 'Kohli', 'Dhoni', 'Yuvi', 'Chawla']
+>>> Final2011.insert(11,'Zahir')
+>>> Final2011
+['Sachin', 'Sehwagh', 'Gambhir', 'Kohli', 'Dhoni', 'Yuvi', 'Chawla', 'Zahir']
+>>> ListApp=['Facebook','Instagram','Tiktok','PUBG']
+>>> ListApp
+['Facebook', 'Instagram', 'Tiktok', 'PUBG']
+>>> ListApp.remove(0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> ListApp.remove('Tiktok')
+>>> ListApp
+['Facebook', 'Instagram', 'PUBG']
+>>> ListApp.remove('ShareIt')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> ListApp=['Facebook','Instagram','Tiktok','PUBG']
+>>> ListApp
+['Facebook', 'Instagram', 'Tiktok', 'PUBG']
+>>> ListApp.pop()
+'PUBG'
+>>> ListApp
+['Facebook', 'Instagram', 'Tiktok']
+>>> ListApp=['Facebook','Instagram','Tiktok','PUBG']
+>>> ListApp.pop(2)
+'Tiktok'
+>>> ListApp
+['Facebook', 'Instagram', 'PUBG']
+>>> ListApp.pop('PUBG')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object cannot be interpreted as an integer
+>>> ListApp=['Facebook','Instagram','Tiktok','PUBG']
+>>> ListApp.clear()
+>>> ListApp
+[]
+>>> ListApp=['Facebook','Instagram','Tiktok','PUBG']
+>>> del ListApp
+>>> ListApp
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'ListApp' is not defined
+>>> ListApp=['Facebook','Instagram','Tiktok','PUBG','ShareIt','PUBG']
+>>> ListApp
+['Facebook', 'Instagram', 'Tiktok', 'PUBG', 'ShareIt', 'PUBG']
+>>> ListApp.index(0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: 0 is not in list
+>>> ListApp.index('Facebook')
+0
+>>> ListApp.index('PUBG')
+3
+>>> ListApp.index('PUBG',3)
+3
+>>> ListApp.index('PUBG',4)
+5
+>>> ListApp.index('PUBG',0,6)
+3
+>>> ListApp.index('PUBG',4,6)
+5
+>>> ListApp.index('PUBG',4,5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: 'PUBG' is not in list
+>>> ListApp.index('PUBG',4,6)
+5
+>>> folderContent=['document.txt','movies.txt','javaProgram.txt','cppDoc.txt']
+>>> folderContent
+['document.txt', 'movies.txt', 'javaProgram.txt', 'cppDoc.txt']
+>>> folderContent.sort()
+>>> folderContent
+['cppDoc.txt', 'document.txt', 'javaProgram.txt', 'movies.txt']
+>>> folderContent=['document.txt','movies1.txt','javaProgram.txt','cppDoc.txt','movies2.txt']
+>>> folderContent.sort()
+>>> folderContent
+['cppDoc.txt', 'document.txt', 'javaProgram.txt', 'movies1.txt', 'movies2.txt']
+>>> folderContent=['document.txt','movies1.txt','javaProgram.txt','cppDoc.txt','movies2.txt']
+>>> folderContent
+['document.txt', 'movies1.txt', 'javaProgram.txt', 'cppDoc.txt', 'movies2.txt']
+>>> folderContent.sort(key=len)
+>>> folderContent
+['cppDoc.txt', 'movies1.txt', 'movies2.txt', 'document.txt', 'javaProgram.txt']
+>>> folderContent=['document.txt','movies1.txt','javaProgram.txt','cppDoc.txt','movies2.txt']
+>>> folderContent.sort(reverse=True)
+>>> folderContent
+['movies2.txt', 'movies1.txt', 'javaProgram.txt', 'document.txt', 'cppDoc.txt']
+>>> folderContent=['document.txt','movies1.txt','javaProgram.txt','cppDoc.txt','movies2.txt']
+>>> folderContent.sort(key=len,reverse=True)
+>>> folderContent
+['javaProgram.txt', 'document.txt', 'movies1.txt', 'movies2.txt', 'cppDoc.txt']
+>>> cloud=['AWS','Azure','GCP','Firebase']
+>>> copycloud=cloud
+>>> copycloud
+['AWS', 'Azure', 'GCP', 'Firebase']
+>>> id(cloud)
+140493811752904
+>>> id(copycloud)
+140493811752904
+>>> cloud=['AWS','Azure','GCP','Firebase']
+>>> copycloud=[]
+>>> copycloud
+[]
+>>> cloud
+['AWS', 'Azure', 'GCP', 'Firebase']
+>>> copycloud=cloud.copy()
+>>> copycloud
+['AWS', 'Azure', 'GCP', 'Firebase']
+>>> copycloud[4].append(['Thinkspeak','CloudIOTCore'])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> copycloud[3].append(['Thinkspeak','CloudIOTCore'])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'append'
+>>> cloud=['AWS','Azure','GCP','Firebase',['Thinkspeak','CloudIOTCore']]
+>>> copycloud=[]
+>>> cloud
+['AWS', 'Azure', 'GCP', 'Firebase', ['Thinkspeak', 'CloudIOTCore']]
+>>> copycloud=cloud.copy()
+>>> id(cloud)
+140493811685704
+>>> id(copycloud)
+140493811752904
+>>> copycloud
+['AWS', 'Azure', 'GCP', 'Firebase', ['Thinkspeak', 'CloudIOTCore']]
+>>> copycloud[4].append('Pubnub')
+>>> copycloud
+['AWS', 'Azure', 'GCP', 'Firebase', ['Thinkspeak', 'CloudIOTCore', 'Pubnub']]
+>>> cloud
+['AWS', 'Azure', 'GCP', 'Firebase', ['Thinkspeak', 'CloudIOTCore', 'Pubnub']]
+>>> import copy as cp
+>>> cloud=['AWS','Azure','GCP','Firebase',['Thinkspeak','CloudIOTCore']]
+>>> cloud
+['AWS', 'Azure', 'GCP', 'Firebase', ['Thinkspeak', 'CloudIOTCore']]
+>>> copycloud=[]
+>>> copycloud
+[]
+>>> copycloud=cp.deepcopy(cloude)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cloude' is not defined
+>>> copycloud=cp.deepcopy(cloud)
+>>> id(copycloud)
+140493811685448
+>>> id(cloud)
+140493811779720
+>>> copycloud
+['AWS', 'Azure', 'GCP', 'Firebase', ['Thinkspeak', 'CloudIOTCore']]
+>>> copycloud[4].append('Pubnub')
+>>> copycloud
+['AWS', 'Azure', 'GCP', 'Firebase', ['Thinkspeak', 'CloudIOTCore', 'Pubnub']]
+>>> cloud
+['AWS', 'Azure', 'GCP', 'Firebase', ['Thinkspeak', 'CloudIOTCore']]
+>>> 
+

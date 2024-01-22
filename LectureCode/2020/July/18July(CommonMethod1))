@@ -1,0 +1,359 @@
+akshu@MSI:~$ python3
+Python 3.6.9 (default, Apr 18 2020, 01:56:04) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> salary = [700000,900000,400000,550000,2200000]
+>>> salary
+[700000, 900000, 400000, 550000, 2200000]
+>>> min(salary)
+400000
+>>> salary=[]
+>>> min(salary)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: min() arg is an empty sequence
+>>> salary=[default=200000]
+  File "<stdin>", line 1
+    salary=[default=200000]
+                   ^
+SyntaxError: invalid syntax
+>>> min(default=200000)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: min expected 1 arguments, got 0
+>>> salary=[]
+>>> min(salary,default=200000)
+200000
+>>> height = (5.8,5.6,5.2,5.5,5.7)
+>>> min(height)
+5.2
+>>> height=()
+>>> min(height)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: min() arg is an empty sequence
+>>> min(height,default=4.0)
+4.0
+>>> friends={'Kanha','Ashish','Rahul','Badhe','Rajesh'}
+>>> friends
+{'Kanha', 'Rajesh', 'Badhe', 'Ashish', 'Rahul'}
+>>> min(friends)
+'Ashish'
+>>> friends={}
+>>> min(friends)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: min() arg is an empty sequence
+>>> min(friends,default='Akshay')
+'Akshay'
+>>> mobilePrice={100000:'iphone',80000:'samsung',70000:'one plus',15000:'Mi'}
+>>> mobilePrice
+{100000: 'iphone', 80000: 'samsung', 70000: 'one plus', 15000: 'Mi'}
+>>> min(mobilePrice)
+15000
+>>> min(4000,3000,1000,500)
+500
+>>> min('Gaurav','Krshna','Amit','Akshay','Shreyas','Swapnil')
+'Akshay'
+>>> list1 = [10,20,30,40,50]
+>>> list2= [100,200,300,400,500]
+>>> list3 = [list1,list2]
+>>> list3
+[[10, 20, 30, 40, 50], [100, 200, 300, 400, 500]]
+>>> min(list3)
+[10, 20, 30, 40, 50]
+>>> friends=['Kanha','Ashish','Rahul','Badhe','Rajesh']
+>>> salary = {700000,900000,400000,550000,2200000}
+>>> min(friends,salary)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '<' not supported between instances of 'set' and 'list'
+>>> friends=['Kanha','Ashish','Rahul','Badhe','Rajesh']
+>>> salary = {700000,900000,400000,550000,2200000}
+>>> friend_salary = [friends,salary]
+>>> min(friends_salary)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'friends_salary' is not defined
+>>> min(friend_salary)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '<' not supported between instances of 'set' and 'list'
+>>> friends=['Kanha','Ashish','Rahul','Badhe','Rajesh']
+>>> max(friends)
+'Rajesh'
+>>> min
+<built-in function min>
+>>> min(friends)
+'Ashish'
+>>> min(friends,key=len)
+'Kanha'
+>>> friends=('Kanha','Ashish','Rahul','Badhe','Rajesh')
+>>> min(friends)
+'Ashish'
+>>> max(friends)
+'Rajesh'
+>>> friends={'Kanha','Ashish','Rahul','Badhe','Rajesh'}
+>>> max(friends)
+'Rajesh'
+>>> max(friends,key=len)
+'Rajesh'
+>>> friend=[]
+>>> max(friends)
+'Rajesh'
+>>> max(friend)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: max() arg is an empty sequence
+>>> max(friend,default='Akshay')
+'Akshay'
+>>> friends={101:'Kanha',201:'Ashish',501:'Rahul',1001:'Badhe',301:'Rajesh'}
+>>> max(friends)
+1001
+>>> max(friends,default=51)
+1001
+>>> friends=['Kanha','Ashish','Rahul','Badhe','Rajesh']
+>>> salary = {700000,900000,400000,550000,2200000}
+>>> friend_salary = [friends,salary]
+>>> max(friend_salary)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '>' not supported between instances of 'set' and 'list'
+>>> salary = [700000,900000,400000,550000,2200000]
+>>> max(friend_salary)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '>' not supported between instances of 'set' and 'list'
+>>> friends=['Kanha','Ashish','Rahul','Badhe','Rajesh']
+>>> salary = [700000,900000,400000,550000,2200000]
+>>> max(friend_salary)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '>' not supported between instances of 'set' and 'list'
+>>> salary = [700000,900000,400000,550000,2200000]
+>>> id = [101,201,1001,4001,701]
+>>> max(salary,id)
+[700000, 900000, 400000, 550000, 2200000]
+>>> salary = [700000,900000,400000,550000,2200000]
+>>> id = [101,201,1001,4001,701]
+>>> salary_id=[salary,id]
+>>> salary_id
+[[700000, 900000, 400000, 550000, 2200000], [101, 201, 1001, 4001, 701]]
+>>> max(salary,id)
+[700000, 900000, 400000, 550000, 2200000]
+>>> MobileApp=['Instagram','Facebook','WhatsApp','Snapchat','Telegram']
+>>> MobileApp
+['Instagram', 'Facebook', 'WhatsApp', 'Snapchat', 'Telegram']
+>>> soretd(MobileApp)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'soretd' is not defined
+>>> sorted(MobileApp)
+['Facebook', 'Instagram', 'Snapchat', 'Telegram', 'WhatsApp']
+>>> sorted(MobileApp,key=len)
+['Facebook', 'WhatsApp', 'Snapchat', 'Telegram', 'Instagram']
+>>> sorted(MobileApp,reverse=True)
+['WhatsApp', 'Telegram', 'Snapchat', 'Instagram', 'Facebook']
+>>> sorted(MobileApp,reverse=True,key=len)
+['Instagram', 'Facebook', 'WhatsApp', 'Snapchat', 'Telegram']
+>>> sorted(MobileApp,key=len,reverse=True)
+['Instagram', 'Facebook', 'WhatsApp', 'Snapchat', 'Telegram']
+>>> MobileApp=('Instagram','Facebook','WhatsApp','Snapchat','Telegram')
+>>> MobilApp
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'MobilApp' is not defined
+>>> MobileApp
+('Instagram', 'Facebook', 'WhatsApp', 'Snapchat', 'Telegram')
+>>> sorted(MobileApp)
+['Facebook', 'Instagram', 'Snapchat', 'Telegram', 'WhatsApp']
+>>> sorted(MobileApp,key=len)
+['Facebook', 'WhatsApp', 'Snapchat', 'Telegram', 'Instagram']
+>>> sorted(MobileApp,reverse=True)
+['WhatsApp', 'Telegram', 'Snapchat', 'Instagram', 'Facebook']
+>>> sorted(MobileApp,reverse=True,key=len)
+['Instagram', 'Facebook', 'WhatsApp', 'Snapchat', 'Telegram']
+>>> sorted(MobileApp,key=len,reverse=True)
+['Instagram', 'Facebook', 'WhatsApp', 'Snapchat', 'Telegram']
+>>> MobileApp={'Instagram','Facebook','WhatsApp','Snapchat','Telegram'}
+>>> MobileApp
+{'Telegram', 'WhatsApp', 'Snapchat', 'Facebook', 'Instagram'}
+>>> sorted(MobileApp)
+['Facebook', 'Instagram', 'Snapchat', 'Telegram', 'WhatsApp']
+>>> sorted(MobileApp,key=len)
+['Telegram', 'WhatsApp', 'Snapchat', 'Facebook', 'Instagram']
+>>> MobileApp={'Instagram','Facebook','WhatsApp','Snapchat','Telegram'}
+>>> sorted(MobileApp,key=len)
+['Telegram', 'WhatsApp', 'Snapchat', 'Facebook', 'Instagram']
+>>> MobileApp={'Instagram','Facebook','WhatsApp','Snapchat','Telegram'}
+>>> MobileApp
+{'Telegram', 'WhatsApp', 'Snapchat', 'Facebook', 'Instagram'}
+>>> sorted(MobileApp,reverse=True)
+['WhatsApp', 'Telegram', 'Snapchat', 'Instagram', 'Facebook']
+>>> MobileApp={'Instagram','Facebook','WhatsApp','Snapchat','Telegram'}
+>>> MobileApp
+{'Telegram', 'WhatsApp', 'Snapchat', 'Facebook', 'Instagram'}
+>>> sorted(MobileApp,key=len)
+['Telegram', 'WhatsApp', 'Snapchat', 'Facebook', 'Instagram']
+>>> MobileApp={'Instagram','Facebook','WhatsApp','Snapchat','Telegram'}
+>>> sorted(MobileApp,key=len,reverse=True)
+['Instagram', 'Telegram', 'WhatsApp', 'Snapchat', 'Facebook']
+>>> sorted(MobileApp,reverse=True,key=len)
+['Instagram', 'Telegram', 'WhatsApp', 'Snapchat', 'Facebook']
+>>> MobileApp={'Instagram':1000,'Facebook':3000,'WhatsApp':50,'Snapchat':0,'Telegram';20}
+  File "<stdin>", line 1
+    MobileApp={'Instagram':1000,'Facebook':3000,'WhatsApp':50,'Snapchat':0,'Telegram';20}
+                                                                                     ^
+SyntaxError: invalid syntax
+>>> MobileApp={'Instagram':1000,'Facebook':3000,'WhatsApp':50,'Snapchat':0,'Telegram':20}
+>>> MobileApp
+{'Instagram': 1000, 'Facebook': 3000, 'WhatsApp': 50, 'Snapchat': 0, 'Telegram': 20}
+>>> sorted(MobileApp)
+['Facebook', 'Instagram', 'Snapchat', 'Telegram', 'WhatsApp']
+>>> sorted(MobileApp,key=len)
+['Facebook', 'WhatsApp', 'Snapchat', 'Telegram', 'Instagram']
+>>> sorted(MobileApp,reverse=True)
+['WhatsApp', 'Telegram', 'Snapchat', 'Instagram', 'Facebook']
+>>> sorted(MobileApp,key=len,reverse=True)
+['Instagram', 'Facebook', 'WhatsApp', 'Snapchat', 'Telegram']
+>>> sorted(MobileApp,reverse=True,key=len)
+['Instagram', 'Facebook', 'WhatsApp', 'Snapchat', 'Telegram']
+>>> for key in sorted(MobileApp):
+...     print(key,Mobile[key])
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+NameError: name 'Mobile' is not defined
+>>> for key in sorted(MobileApp):
+...     print(key,MobileApp[key])
+... 
+Facebook 3000
+Instagram 1000
+Snapchat 0
+Telegram 20
+WhatsApp 50
+>>> Students = ['Akshay','Satyam','Saurabh','Abhi'] 
+>>> Colleges = ['Sinhgad','Zeal','JSPM','Modern']
+>>> Students
+['Akshay', 'Satyam', 'Saurabh', 'Abhi']
+>>> Colleges
+['Sinhgad', 'Zeal', 'JSPM', 'Modern']
+>>> zip(Students,Colleges)
+<zip object at 0x7efe8c84d448>
+>>> list(zip(Students,Colleges))
+[('Akshay', 'Sinhgad'), ('Satyam', 'Zeal'), ('Saurabh', 'JSPM'), ('Abhi', 'Modern')]
+>>> tuple(zip(Students,Colleges))
+(('Akshay', 'Sinhgad'), ('Satyam', 'Zeal'), ('Saurabh', 'JSPM'), ('Abhi', 'Modern'))
+>>> set(zip(Students,Colleges))
+{('Satyam', 'Zeal'), ('Saurabh', 'JSPM'), ('Abhi', 'Modern'), ('Akshay', 'Sinhgad')}
+>>> dict(zip(Students,Colleges))
+{'Akshay': 'Sinhgad', 'Satyam': 'Zeal', 'Saurabh': 'JSPM', 'Abhi': 'Modern'}
+>>> Students = ['Akshay','Satyam','Saurabh','Abhi'] 
+>>> Colleges = ('Sinhgad','Zeal','JSPM','Modern')
+>>> zip(Students,Colleges)
+<zip object at 0x7efe8c84d448>
+>>> list(zip(Students,Colleges))
+[('Akshay', 'Sinhgad'), ('Satyam', 'Zeal'), ('Saurabh', 'JSPM'), ('Abhi', 'Modern')]
+>>> Students = ['Akshay','Satyam','Saurabh','Abhi'] 
+>>> Colleges = {'Sinhgad','Zeal','JSPM','Modern'}
+>>> Colleges
+{'Sinhgad', 'Zeal', 'JSPM', 'Modern'}
+>>> Students
+['Akshay', 'Satyam', 'Saurabh', 'Abhi']
+>>> zip(Students,Colleges)
+<zip object at 0x7efe8c84d448>
+>>> list(zip(Students,Colleges))
+[('Akshay', 'Sinhgad'), ('Satyam', 'Zeal'), ('Saurabh', 'JSPM'), ('Abhi', 'Modern')]
+>>> 
+akshu@MSI:~$ python2
+Python 2.7.17 (default, Apr 15 2020, 17:20:14) 
+[GCC 7.5.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> colleges = ('Sinhgad','Zeal','JSPM','Modern')
+>>> students = {'Shardul','Onkar','Adtiya','Shashi'}
+>>> colleges
+('Sinhgad', 'Zeal', 'JSPM', 'Modern')
+>>> students
+set(['Onkar', 'Shardul', 'Adtiya', 'Shashi'])
+>>> zip(colleges,students)
+[('Sinhgad', 'Onkar'), ('Zeal', 'Shardul'), ('JSPM', 'Adtiya'), ('Modern', 'Shashi')]
+>>> exit()
+akshu@MSI:~$ python3
+Python 3.6.9 (default, Apr 18 2020, 01:56:04) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> T_Shirt_Price = [('Wrogn',1200),('Zara',2000),('H&M',1300),('Puma',1500),('LP',1400)]
+>>> T_Shirt_Price
+[('Wrogn', 1200), ('Zara', 2000), ('H&M', 1300), ('Puma', 1500), ('LP', 1400)]
+>>> T_Shirt,Price=zip(T_Shirt_Price)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: too many values to unpack (expected 2)
+>>> T_Shirt_Price = [('Wrogn',1200),('Zara',2000),('H&M',1300),('Puma',1500),('LP',1400)]
+>>> T_Shirt_Price
+[('Wrogn', 1200), ('Zara', 2000), ('H&M', 1300), ('Puma', 1500), ('LP', 1400)]
+>>> tshirt,price=zip(T_Shirt_Price)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: too many values to unpack (expected 2)
+>>> tshirt=zip(T_Shirt_Price)
+>>> tshirt
+<zip object at 0x7f853d9d6648>
+>>> list(tshirt)
+[(('Wrogn', 1200),), (('Zara', 2000),), (('H&M', 1300),), (('Puma', 1500),), (('LP', 1400),)]
+>>> tshirt,price=zip(T_Shirt_Price)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: too many values to unpack (expected 2)
+>>> tshirt,price=zip(T_Shirt_Price,)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: too many values to unpack (expected 2)
+>>> tshirt,price=zip(*T_Shirt_Price)
+>>> tshirt
+('Wrogn', 'Zara', 'H&M', 'Puma', 'LP')
+>>> price
+(1200, 2000, 1300, 1500, 1400)
+>>> brands = {'Wrogn','Puma','Zara','LP','H&M','UCB'}
+>>> brands
+{'Zara', 'LP', 'UCB', 'H&M', 'Wrogn', 'Puma'}
+>>> brands.add('HRX')
+>>> brands
+{'HRX', 'Zara', 'LP', 'UCB', 'H&M', 'Wrogn', 'Puma'}
+>>> f_brands = fronzeset(brands)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'fronzeset' is not defined
+>>> f_brands = frozenset(brands)
+>>> f_brands
+frozenset({'HRX', 'Zara', 'LP', 'Wrogn', 'Puma', 'UCB', 'H&M'})
+>>> type(f_brands)
+<class 'frozenset'>
+>>> f_brands.add('Manayvar')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'frozenset' object has no attribute 'add'
+>>> brands = ['Wrogn','Puma','Zara','LP','H&M','UCB']
+>>> brands
+['Wrogn', 'Puma', 'Zara', 'LP', 'H&M', 'UCB']
+>>> f_brands = fronzeset(brands)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'fronzeset' is not defined
+>>> f_brands = frozenset(brands)
+>>> f_brands
+frozenset({'Zara', 'LP', 'UCB', 'H&M', 'Wrogn', 'Puma'})
+>>> brands = ('Wrogn','Puma','Zara','LP','H&M','UCB')
+>>> f_brands = frozenset(brands)
+>>> f_brands
+frozenset({'Zara', 'LP', 'UCB', 'H&M', 'Wrogn', 'Puma'})
+>>> brands = {'Wrogn':1000,'Puma':700,'Zara':200,'LP':900,'H&M':130,'UCB':270}
+>>> f_brands
+frozenset({'Zara', 'LP', 'UCB', 'H&M', 'Wrogn', 'Puma'})
+>>> brands
+{'Wrogn': 1000, 'Puma': 700, 'Zara': 200, 'LP': 900, 'H&M': 130, 'UCB': 270}
+>>> f_brands = frozenset(brands)
+>>> f_brands
+frozenset({'Zara', 'LP', 'Wrogn', 'Puma', 'UCB', 'H&M'})
+>>> 
+

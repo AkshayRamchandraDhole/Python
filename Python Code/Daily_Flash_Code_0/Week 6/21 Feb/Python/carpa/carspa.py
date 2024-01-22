@@ -1,0 +1,12 @@
+import math
+a=int(input("Enter Angle:"))
+r=int(input("Enter radius:"))
+t=int(input("Enter :"))
+a=math.radians(a)
+t=math.radians(t)
+x=r*math.sin(a)*math.cos(t)
+y=r*math.sin(a)*math.sin(t)
+z=r*math.cos(t)
+print("X:",round(x,3))
+print("Y:",round(y,3))
+print("Z:",round(z,3))

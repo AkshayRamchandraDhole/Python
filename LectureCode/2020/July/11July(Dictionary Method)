@@ -1,0 +1,199 @@
+akshu@MSI:~$ python3
+Python 3.6.9 (default, Apr 18 2020, 01:56:04) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> Instagram =dict({'Name':"Core2Web",'Post':145,'Followers':1146,'Following':22,'Online':False})
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False}
+>>> Instagram['POst']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'POst'
+>>> Instagram['Post']
+145
+>>> Instagram[145]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 145
+>>> Instagram['Close Friend']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'Close Friend'
+>>> Instagram.index(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'index'
+>>> Instagram.get()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: get expected at least 1 arguments, got 0
+>>> Instagram.get('Post')
+145
+>>> Instagram.get('Name')
+'Core2Web'
+>>> Instagram.get('Close Friend')
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False}
+>>> Instagram.get('Close Friend','Not Mentioned')
+'Not Mentioned'
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False}
+>>> Instagram.get('Post')
+145
+>>> Instagram.get('Post',145)
+145
+>>> Instagram.get('Post',148)
+145
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False}
+>>> Instagram.keys()
+dict_keys(['Name', 'Post', 'Followers', 'Following', 'Online'])
+>>> Instagram.keys('Name')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: keys() takes no arguments (1 given)
+>>> Instagram.values()
+dict_values(['Core2Web', 145, 1146, 22, False])
+>>> Instagram.values(145)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: values() takes no arguments (1 given)
+>>> Instagram.items()
+dict_items([('Name', 'Core2Web'), ('Post', 145), ('Followers', 1146), ('Following', 22), ('Online', False)])
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False}
+>>> Instagram.pop()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: pop expected at least 1 arguments, got 0
+>>> Instagram.pop('Post')
+145
+>>> Instagram
+{'Name': 'Core2Web', 'Followers': 1146, 'Following': 22, 'Online': False}
+>>> Instagram.pop(2,'Not')
+'Not'
+>>> Instagram
+{'Name': 'Core2Web', 'Followers': 1146, 'Following': 22, 'Online': False}
+>>> Instagram.pop('Name','Not Mention')
+'Core2Web'
+>>> Instagram
+{'Followers': 1146, 'Following': 22, 'Online': False}
+>>> Instagram =dict({'Name':"Core2Web",'Post':145,'Followers':1146,'Following':22,'Online':False})
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False}
+>>> Instagram.popitem()
+('Online', False)
+>>> Instagram =dict({'Name':"Core2Web",'Post':145,'Followers':1146,'Following':22,'Online':False})
+>>> Instagram.clear()
+>>> Instagram
+{}
+>>> Instagram =dict({'Name':"Core2Web",'Post':145,'Followers':1146,'Following':22,'Online':False})
+>>> Instagram['Mutual Friend':25]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'slice'
+>>> Instagram['Mutual Friend']=2
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Mutual Friend': 2}
+>>> Instagram['Mutual Friend']=25
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Mutual Friend': 25}
+>>> Instagram['Close Friend']=50
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Mutual Friend': 25, 'Close Friend': 50}
+>>> Instagram.update('Close Friend',65)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: update expected at most 1 arguments, got 2
+>>> Instagram.update('Close Friend')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+>>> Instagram.update()
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Mutual Friend': 25, 'Close Friend': 50}
+>>> friends = {'Akshay','Gaurav','Krishna'}
+>>> frineds
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'frineds' is not defined
+>>> friends
+{'Krishna', 'Akshay', 'Gaurav'}
+>>> Instagram.update(friends)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: dictionary update sequence element #0 has length 7; 2 is required
+>>> Instagram.update('friends')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+>>> Instagram =dict({'Name':"Core2Web",'Post':145,'Followers':1146,'Following':22,'Online':False})
+>>> friends = {'Mutual Friends':25,'Close Friend':50}
+>>> Instagram.update(friends)
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Mutual Friends': 25, 'Close Friend': 50}
+>>> Instagram.update('Block List':12)
+  File "<stdin>", line 1
+    Instagram.update('Block List':12)
+                                 ^
+SyntaxError: invalid syntax
+>>> Instagram.update('Block List')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Mutual Friends': 25, 'Close Friend': 50}
+>>> friends = {'Mutual Friends':['Akshay','Gaurav','Shreyas']}
+>>> friends
+{'Mutual Friends': ['Akshay', 'Gaurav', 'Shreyas']}
+>>> friends = {['Allow']:['Akshay','Gaurav','Shreyas']}
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Mutual Friends': 25, 'Close Friend': 50}
+>>> Instagram.setdefault('Post')
+145
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Mutual Friends': 25, 'Close Friend': 50}
+>>> Instagram.setdefault('Post',148)
+145
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Mutual Friends': 25, 'Close Friend': 50}
+>>> Instagram.setdefault('Block List')
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Mutual Friends': 25, 'Close Friend': 50, 'Block List': None}
+>>> Instagram.setdefault('Block List',20)
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Mutual Friends': 25, 'Close Friend': 50, 'Block List': None}
+>>> Instagram.setdefault('Block List',20)
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Mutual Friends': 25, 'Close Friend': 50, 'Block List': None}
+>>> Instagram =dict({'Name':"Core2Web",'Post':145,'Followers':1146,'Following':22,'Online':False})
+>>> Instagram.setdefault('Block List',20)
+20
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Block List': 20}
+>>> dict.fromkeys(Instagram)
+{'Name': None, 'Post': None, 'Followers': None, 'Following': None, 'Online': None, 'Block List': None}
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Block List': 20}
+>>> newDict = dict.fromkeys(Instagram,10)
+>>> newDict
+{'Name': 10, 'Post': 10, 'Followers': 10, 'Following': 10, 'Online': 10, 'Block List': 10}
+>>> newDict = dict.fromkeys(Instagram,{'Akshay','Gaurav','Krishna'})
+>>> newDict
+{'Name': {'Krishna', 'Akshay', 'Gaurav'}, 'Post': {'Krishna', 'Akshay', 'Gaurav'}, 'Followers': {'Krishna', 'Akshay', 'Gaurav'}, 'Following': {'Krishna', 'Akshay', 'Gaurav'}, 'Online': {'Krishna', 'Akshay', 'Gaurav'}, 'Block List': {'Krishna', 'Akshay', 'Gaurav'}}
+>>> Instagram
+{'Name': 'Core2Web', 'Post': 145, 'Followers': 1146, 'Following': 22, 'Online': False, 'Block List': 20}
+>>> Instagram['Name']
+'Core2Web'
+>>> newDict['Name']
+{'Krishna', 'Akshay', 'Gaurav'}
+>>> newDict['Name']= ['Gopal']
+>>> newDict['Name']
+['Gopal']
+>>> newDict
+{'Name': ['Gopal'], 'Post': {'Krishna', 'Akshay', 'Gaurav'}, 'Followers': {'Krishna', 'Akshay', 'Gaurav'}, 'Following': {'Krishna', 'Akshay', 'Gaurav'}, 'Online': {'Krishna', 'Akshay', 'Gaurav'}, 'Block List': {'Krishna', 'Akshay', 'Gaurav'}}
+>>> 
+

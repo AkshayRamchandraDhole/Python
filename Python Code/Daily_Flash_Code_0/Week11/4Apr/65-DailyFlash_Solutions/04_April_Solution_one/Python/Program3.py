@@ -1,0 +1,12 @@
+col = int(input("Enter Columns : "))
+row=col*2-1
+
+s = input("Enter a String")
+
+for i in range(row):
+	for j in range(col):
+		if i+j>=row//2 and i-j<=row//2 :
+			print(s[j],end="\t")
+		else:
+			print("",end="\t")
+	print()

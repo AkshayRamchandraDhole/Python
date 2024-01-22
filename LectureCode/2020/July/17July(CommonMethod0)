@@ -1,0 +1,252 @@
+akshu@MSI:~$ python3
+Python 3.6.9 (default, Apr 18 2020, 01:56:04) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> c2wAndriodApp = ['global','forum','codedsnippets','logicbuilding','c2wnetwork']
+>>> c2wAndriodApp
+['global', 'forum', 'codedsnippets', 'logicbuilding', 'c2wnetwork']
+>>> c2wFlutterApp = c2wAndriodApp
+>>> c2wFlutterApp 
+['global', 'forum', 'codedsnippets', 'logicbuilding', 'c2wnetwork']
+>>> c2wAndriodApp
+['global', 'forum', 'codedsnippets', 'logicbuilding', 'c2wnetwork']
+>>> c2wFlutterApp.append('InterviewInfo') 
+>>> c2wFlutterApp 
+['global', 'forum', 'codedsnippets', 'logicbuilding', 'c2wnetwork', 'InterviewInfo']
+>>> c2wAndriodApp
+['global', 'forum', 'codedsnippets', 'logicbuilding', 'c2wnetwork', 'InterviewInfo']
+>>> import copy as cp
+>>> c2wAndriodApp = ['global','forum','codedsnippets','logicbuilding','c2wnetwork']
+>>> c2wFlutterApp = cp.copy(c2wAndriodApp)
+>>> c2wFlutterApp 
+['global', 'forum', 'codedsnippets', 'logicbuilding', 'c2wnetwork']
+>>> c2wAndriodApp
+['global', 'forum', 'codedsnippets', 'logicbuilding', 'c2wnetwork']
+>>> c2wFlutterApp.append('InterviewInfo') 
+>>> c2wFlutterApp 
+['global', 'forum', 'codedsnippets', 'logicbuilding', 'c2wnetwork', 'InterviewInfo']
+>>> c2wAndriodApp
+['global', 'forum', 'codedsnippets', 'logicbuilding', 'c2wnetwork']
+>>> c2wAndriodApp = ['global','forum','codedsnippets','logicbuilding','c2wnetwork']
+>>> c2wAndriodApp = ['global','forum','codedsnippets','logicbuilding','c2wnetwork']
+>>> c2wAndriodApp = ['global','forum','codedsnippets','logicbuilding',['Blog','PlacedStudent','CompanyOpening']]
+>>> c2wAndriodApp
+['global', 'forum', 'codedsnippets', 'logicbuilding', ['Blog', 'PlacedStudent', 'CompanyOpening']]
+>>> c2wFlutterApp = cp.copy(c2wAndriodApp)
+>>> c2wFlutterApp  
+['global', 'forum', 'codedsnippets', 'logicbuilding', ['Blog', 'PlacedStudent', 'CompanyOpening']]
+>>> c2wFlutterApp.append('CompanyInfo')  
+>>> c2wFlutterApp  
+['global', 'forum', 'codedsnippets', 'logicbuilding', ['Blog', 'PlacedStudent', 'CompanyOpening'], 'CompanyInfo']
+>>> c2wFlutterApp.pop()  
+'CompanyInfo'
+>>> c2wFlutterApp  
+['global', 'forum', 'codedsnippets', 'logicbuilding', ['Blog', 'PlacedStudent', 'CompanyOpening']]
+>>> c2wFlutterApp[4]  
+['Blog', 'PlacedStudent', 'CompanyOpening']
+>>> c2wFlutterApp[4].append('CompanyInfo')  
+>>> c2wFlutterApp  
+['global', 'forum', 'codedsnippets', 'logicbuilding', ['Blog', 'PlacedStudent', 'CompanyOpening', 'CompanyInfo']]
+>>> c2wAndriodApp
+['global', 'forum', 'codedsnippets', 'logicbuilding', ['Blog', 'PlacedStudent', 'CompanyOpening', 'CompanyInfo']]
+>>> c2wAndriodApp = ['global','forum','codedsnippets','logicbuilding',['Blog','PlacedStudent','CompanyOpening']]
+>>> c2wAndriodApp
+['global', 'forum', 'codedsnippets', 'logicbuilding', ['Blog', 'PlacedStudent', 'CompanyOpening']]
+>>> c2wFlutterApp = cp.deepcopy(c2wAndriodApp)
+>>> c2wFlutterApp  
+['global', 'forum', 'codedsnippets', 'logicbuilding', ['Blog', 'PlacedStudent', 'CompanyOpening']]
+>>> c2wFlutterApp[4].append('CompanyInfo')  
+>>> c2wFlutterApp  
+['global', 'forum', 'codedsnippets', 'logicbuilding', ['Blog', 'PlacedStudent', 'CompanyOpening', 'CompanyInfo']]
+>>> c2wAndriodApp
+['global', 'forum', 'codedsnippets', 'logicbuilding', ['Blog', 'PlacedStudent', 'CompanyOpening']]
+>>> tupleDemo = ()
+>>> type(tupleDemo)
+<class 'tuple'>
+>>> tupleDemo = ('Shashi','Ashish','Rahul',['Datta','Rajesh','Kanha'])
+>>> tupleDemo
+('Shashi', 'Ashish', 'Rahul', ['Datta', 'Rajesh', 'Kanha'])
+>>> friendDemo = tupleDemo
+>>> friendDemo 
+('Shashi', 'Ashish', 'Rahul', ['Datta', 'Rajesh', 'Kanha'])
+>>> friendDemo[0] 
+'Shashi'
+>>> friendDemo[3] 
+['Datta', 'Rajesh', 'Kanha']
+>>> friendDemo[3].add('Akshay') 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'add'
+>>> c2wAndriodApp = {'global','forum','codedsnippets','logicbuilding',['Blog','PlacedStudent','CompanyOpening']}
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+>>> c2wAndriodApp = {'global','forum','codedsnippets','logicbuilding',('Blog','PlacedStudent','CompanyOpening')}
+>>> c2wAndriodApp
+{'forum', ('Blog', 'PlacedStudent', 'CompanyOpening'), 'codedsnippets', 'logicbuilding', 'global'}
+>>> c2wFlutterApp = cp.deepcopy(c2wAndriodApp)
+>>> c2wFlutterApp  
+{'forum', ('Blog', 'PlacedStudent', 'CompanyOpening'), 'codedsnippets', 'logicbuilding', 'global'}
+>>> c2wFlutterApp.pop()  
+'forum'
+>>> c2wFlutterApp  
+{('Blog', 'PlacedStudent', 'CompanyOpening'), 'codedsnippets', 'logicbuilding', 'global'}
+>>> c2wAndriodApp
+{'forum', ('Blog', 'PlacedStudent', 'CompanyOpening'), 'codedsnippets', 'logicbuilding', 'global'}
+>>> c2wAndriodApp = {'global':1890,'forum':250,'codedsnippets':70,'c2wNetwork':{'Blog':20,'PlacedStudent':578,'CompanyOpening':30}}
+>>> c2wFlutterApp = cp.copy(c2wAndriodApp)
+>>> c2wFlutterApp  
+{'global': 1890, 'forum': 250, 'codedsnippets': 70, 'c2wNetwork': {'Blog': 20, 'PlacedStudent': 578, 'CompanyOpening': 30}}
+>>> c2wFlutterApp['c2wNetwork']  
+{'Blog': 20, 'PlacedStudent': 578, 'CompanyOpening': 30}
+>>> c2wFlutterApp['c2wNetwork']['PlacedStudent'] = 1000  
+>>> c2wFlutterApp  
+{'global': 1890, 'forum': 250, 'codedsnippets': 70, 'c2wNetwork': {'Blog': 20, 'PlacedStudent': 1000, 'CompanyOpening': 30}}
+>>> c2wAndriodApp
+{'global': 1890, 'forum': 250, 'codedsnippets': 70, 'c2wNetwork': {'Blog': 20, 'PlacedStudent': 1000, 'CompanyOpening': 30}}
+>>> c2wAndriodApp = {'global':1890,'forum':250,'codedsnippets':70,'c2wNetwork':{'Blog':20,'PlacedStudent':578,'CompanyOpening':30}}
+>>> c2wFlutterApp = cp.deecopy(c2wAndriodApp)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'copy' has no attribute 'deecopy'
+>>> c2wFlutterApp = cp.deepcopy(c2wAndriodApp)
+>>> c2wFlutterApp  
+{'global': 1890, 'forum': 250, 'codedsnippets': 70, 'c2wNetwork': {'Blog': 20, 'PlacedStudent': 578, 'CompanyOpening': 30}}
+>>> c2wFlutterApp['c2wNetwork']['PlacedStudent'] = 1000  
+>>> c2wFlutterApp  
+{'global': 1890, 'forum': 250, 'codedsnippets': 70, 'c2wNetwork': {'Blog': 20, 'PlacedStudent': 1000, 'CompanyOpening': 30}}
+>>> c2wAndriodApp
+{'global': 1890, 'forum': 250, 'codedsnippets': 70, 'c2wNetwork': {'Blog': 20, 'PlacedStudent': 578, 'CompanyOpening': 30}}
+>>> shares = [('Google','Jio'),('Jio','Facebook'),('Amazon','Netflix'),('Jio','Facebook'),'Microsoft']
+>>> shares
+[('Google', 'Jio'), ('Jio', 'Facebook'), ('Amazon', 'Netflix'), ('Jio', 'Facebook'), 'Microsoft']
+>>> shares.count()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: count() takes exactly one argument (0 given)
+>>> shares.count(('Jio','Facebook'))
+2
+>>> shares.count(('Jio','Jio'))
+0
+>>> shares.count(('Google','Jio'))
+1
+>>> shares = (('Google','Jio'),('Jio','Facebook'),('Amazon','Netflix'),('Jio','Facebook'),'Microsoft')
+>>> shares
+(('Google', 'Jio'), ('Jio', 'Facebook'), ('Amazon', 'Netflix'), ('Jio', 'Facebook'), 'Microsoft')
+>>> shares.count()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: count() takes exactly one argument (0 given)
+>>> shares.count(('Google','Jio'))
+1
+>>> shares.count(('Jio','Facebook'))
+2
+>>> shares = {('Google','Jio'),('Jio','Facebook'),('Amazon','Netflix'),('Jio','Facebook'),'Microsoft'}
+>>> shares
+{('Google', 'Jio'), 'Microsoft', ('Jio', 'Facebook'), ('Amazon', 'Netflix')}
+>>> shares.count()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'set' object has no attribute 'count'
+>>> shares.count(('Google','Jio'))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'set' object has no attribute 'count'
+>>> shares = {('Google','Jio'):7,('Jio','Facebook'):5,('Amazon','Netflix'):4,('Jio','Facebook'):2,'Microsoft':1}
+>>> shares
+{('Google', 'Jio'): 7, ('Jio', 'Facebook'): 2, ('Amazon', 'Netflix'): 4, 'Microsoft': 1}
+>>> shares.count(('Google','Jio'))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'count'
+>>> Employee = ['Ashish',9.8,'Sr Developer',0.0]
+>>> Employee
+['Ashish', 9.8, 'Sr Developer', 0.0]
+>>> all(Employee)
+False
+>>> Employee = ['Ashish',9.8,'Sr Developer',11110.0]
+>>> Employee
+['Ashish', 9.8, 'Sr Developer', 11110.0]
+>>> all(Employee)
+True
+>>> Employee = ('Ashish',9.8,'Sr Developer',11110.0)
+>>> all(Employee)
+True
+>>> Employee = ('Ashish',9.8,'Sr Developer',0.0)
+>>> all(Employee)
+False
+>>> Employee = {'Ashish',9.8,'Sr Developer',0.0}
+>>> all(Employee)
+False
+>>> Employee = {'Ashish',9.8,'Sr Developer',11110.0}
+>>> all(Employee)
+True
+>>> Employee = {'EmpName':'Ashish','Perform':9.8,'Designa':'Sr Developer','Sal':11110.0}
+>>> Employee
+{'EmpName': 'Ashish', 'Perform': 9.8, 'Designa': 'Sr Developer', 'Sal': 11110.0}
+>>> all(Employee)
+True
+>>> Employee = {'EmpName':'Ashish','Perform':9.8,'Designa':'Sr Developer',0:11110.0}
+>>> all(Employee)
+False
+>>> Employee = {'Ashish',9.8,'Sr Developer',0.0}
+>>> any(Employee)
+True
+>>> anyDemo=[0,0.0]
+>>> any(anyDemo)
+False
+>>> anyDemo=[0,0.0,[0]]
+>>> any(anyDemo)
+True
+>>> Employee = ('Ashish',9.8,'Sr Developer',0.0)
+>>> any(Employee)
+True
+>>> Employee = ('Ashish',9.8,'Sr Developer',10.0)
+>>> any(Employee)
+True
+>>> anyDemo=(0,0.0,[0])
+>>> any(anyDemo)
+True
+>>> anyDemo=(0,0.0)
+>>> any(anyDemo)
+False
+>>> Employee = {'EmpName':'Ashish','Perform':9.8,'Designa':'Sr Developer',0:11110.0}
+>>> any(Employee)
+True
+>>> Employee = {0:'Ashish',0:9.8,0:'Sr Developer',0:11110.0}
+>>> any(Employee)
+False
+>>> IndianBusiness = ['Ambani','Tata','Adani','Mahindra','Birla']
+>>> IndianBusiness 
+['Ambani', 'Tata', 'Adani', 'Mahindra', 'Birla']
+>>> length(IndianBusiness)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'length' is not defined
+>>> length(IndianBusiness) 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'length' is not defined
+>>> Length(IndianBusiness) 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Length' is not defined
+>>> IndianBusiness.length()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'length'
+>>> IndianBusiness.length
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'length'
+>>> len(IndianBusiness) 
+5
+>>> IndianBusiness = ('Ambani','Tata','Adani','Mahindra','Birla')
+>>> len(IndianBusiness) 
+5
+>>> IndianBusiness = {'Ambani','Tata','Adani','Mahindra','Birla'}
+>>> len(IndianBusiness) 
+5
+>>> IndianBusiness = {'Ambani':1,'Tata':2,'Adani':3,'Mahindra':4,'Birla':5}
+>>> len(IndianBusiness) 
+
